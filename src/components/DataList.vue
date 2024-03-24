@@ -49,11 +49,10 @@
             v-model="result.kco2e"
             type="number"
             class="input-limited-size"
-            @click.prevent="callRemoveResult"
           />
         </td>
         <td class="border px-4 text-right">
-          <button @click.prevent="callRemoveResult" class="btn-danger">
+          <button @click.prevent="callRemoveResult(result.id)" class="btn-danger">
             ✕ Delete
           </button>
         </td>
@@ -88,13 +87,7 @@ const addResult = () => {
   newModel.kco2e = null;
 };
 
-const callRemoveResult = (result) => {
-  resultsStore.removeResult(result);
+const callRemoveResult = (id) => {
+  resultsStore.removeResult(id);
 };
 </script>
-
-<style scoped lang="scss">
-.data-list {
-  overflow-y: auto;
-}
-</style>
