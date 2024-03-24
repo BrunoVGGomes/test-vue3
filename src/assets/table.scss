@@ -1,0 +1,28 @@
+@import './base.scss';
+
+table {
+    display: table;
+
+    @media only screen and (max-width: $breakpoint-sm) {
+        display: block;
+        width: 100%;
+
+        thead {
+            display: none;
+        }
+
+        tbody, tr {
+            width: 100%;
+            display: grid;
+        }
+
+        tr {
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--color-border);
+
+            td {
+                padding: 0.5rem 0;
+            }
+        }
+    }
+}
