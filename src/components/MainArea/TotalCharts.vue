@@ -1,22 +1,30 @@
 <template>
-  <div v-if="results.length" class="pb-1">
+  <div v-if="results.length" class="filter-area">
     <select v-model="data.reference" class="input-inline mr-1">
       <option value="organizations">Organizations</option>
       <option value="catergories">Categories</option>
     </select>
 
-    <button
-      :class="[!data.show.barChart ? 'btn-default' : 'btn-success', 'btn-inline mr-1']"
-      @click="data.show.barChart = !data.show.barChart"
-    >
-      Bar Chart
-    </button>
-    <button
-      :class="[!data.show.donutChart ? 'btn-default' : 'btn-success', 'btn-inline mr-1']"
-      @click="data.show.donutChart = !data.show.donutChart"
-    >
-      Bar Donut
-    </button>
+    <span>
+      <button
+        :class="[
+          !data.show.barChart ? 'btn-default' : 'btn-success',
+          'btn-inline mr-1',
+        ]"
+        @click="data.show.barChart = !data.show.barChart"
+      >
+        Bar Chart
+      </button>
+      <button
+        :class="[
+          !data.show.donutChart ? 'btn-default' : 'btn-success',
+          'btn-inline mr-1',
+        ]"
+        @click="data.show.donutChart = !data.show.donutChart"
+      >
+        Bar Donut
+      </button>
+    </span>
   </div>
 
   <div v-if="results.length" class="chart-area">
@@ -30,7 +38,10 @@
       />
     </card-area>
 
-    <card-area v-if="data.show.barChart">
+    <card-area
+      v-if="data.show.barChart"
+      :class="[{ 'flex-grow': data.show.donutChart }]"
+    >
       <template #title> Emissions by {{ referenceName }} </template>
       <bar-chart
         v-if="displayChart"
@@ -109,11 +120,19 @@ watch(totalData, () => {
 });
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+.filter-area {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
 .chart-area {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1rem;
   height: fit-content;
+  justify-content: space-between;
 }
 </style>
