@@ -3,7 +3,7 @@
     <div class="list-area w-sm-100 p-sm-1">
       <DataList />
     </div>
-    <div class="chart-area flex-grow p-1">
+    <div class="chart-area flex-grow">
       <TotalCharts />
     </div>
   </div>
@@ -21,6 +21,10 @@ const results = resultsStore.results;
 
 <style scoped lang="scss">
 @import "@/assets/base.scss";
+
+.chart-area {
+  padding: 0 1rem;
+}
 
 @media only screen and (max-width: $breakpoint-sm) {
   .container {
