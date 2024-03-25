@@ -22,7 +22,7 @@
         ]"
         @click="data.show.donutChart = !data.show.donutChart"
       >
-        Bar Donut
+        Donut Chart
       </button>
     </span>
   </div>
