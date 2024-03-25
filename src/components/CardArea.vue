@@ -22,7 +22,6 @@
   }
 }
 
-
 .card {
   padding: 1rem;
   border: 1px solid var(--color-border);
