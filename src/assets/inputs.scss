@@ -1,5 +1,15 @@
 @import "./base.scss";
 
+:root {
+  --input-background: var(--vt-c-grey-1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --input-background: var(--vt-c-indigo);
+  }
+}
+
 input,
 select {
   padding: 0.5rem;
@@ -7,7 +17,7 @@ select {
   border-radius: 0.25rem;
   font-size: 1rem;
   color: var(--color-text);
-  background-color: var(--vt-c-indigo);
+  background-color: var(--input-background);
   width: 100%;
 
   &.input-inline {
@@ -20,6 +30,7 @@ select {
       max-width: 100px;
     }
   }
+  
 }
 
 input[type="number"] {
