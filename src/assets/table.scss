@@ -1,6 +1,6 @@
 @import './base.scss';
 
-table {
+table.table-responsive {
     display: table;
 
     @media only screen and (max-width: $breakpoint-sm) {

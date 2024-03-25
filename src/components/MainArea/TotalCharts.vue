@@ -28,7 +28,7 @@
   </div>
 
   <div v-if="results.length" class="chart-area">
-    <card-area v-show="data.show.donutChart">
+    <card-area v-show="data.show.donutChart" class="w-sm-100">
       <template #title> Emissions by {{ referenceName }} </template>
       <donut-chart
         v-if="displayChart"
@@ -40,7 +40,7 @@
     
     <card-area
       v-show="data.show.barChart"
-      :class="[{ 'flex-grow': data.show.donutChart }]"
+      :class="[{ 'flex-grow': data.show.donutChart }, 'w-sm-100']"
     >
       <template #title> Emissions by {{ referenceName }} </template>
       <bar-chart

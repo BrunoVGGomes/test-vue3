@@ -1,5 +1,5 @@
 <template>
-  <table class="table-auto w-full">
+  <table class="table-responsive">
     <thead>
       <tr>
         <th class="px-4">Organization</th>

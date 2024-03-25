@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="list-area">
+    <div class="list-area w-sm-100 p-sm-1">
       <DataList />
     </div>
     <div class="chart-area flex-grow p-1">
