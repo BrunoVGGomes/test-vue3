@@ -14,6 +14,12 @@
     align-items: center;
     margin-bottom: 2rem;
     border: 1px solid grren;
+    color: var(--vt-cr-green-2);
+
+    @media only screen and (max-width: $breakpoint-sm) {
+      padding: 1.5rem;
+    }
+
 
     h1 {
       font-size: 2rem;

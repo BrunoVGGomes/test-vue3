@@ -4,7 +4,7 @@ import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <header>
+  <header class="main-header">
     <h1>
       CO2 Tracker
     </h1>
