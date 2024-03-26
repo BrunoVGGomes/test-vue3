@@ -8,21 +8,21 @@
     <span>
       <button
         :class="[
-          !data.show.barChart ? 'btn-default' : 'btn-success',
-          'btn-inline mr-1',
-        ]"
-        @click="data.show.barChart = !data.show.barChart"
-      >
-        Bar Chart
-      </button>
-      <button
-        :class="[
           !data.show.donutChart ? 'btn-default' : 'btn-success',
           'btn-inline mr-1',
         ]"
         @click="data.show.donutChart = !data.show.donutChart"
       >
         Donut Chart
+      </button>
+      <button
+        :class="[
+          !data.show.barChart ? 'btn-default' : 'btn-success',
+          'btn-inline mr-1',
+        ]"
+        @click="data.show.barChart = !data.show.barChart"
+      >
+        Bar Chart
       </button>
     </span>
   </div>
